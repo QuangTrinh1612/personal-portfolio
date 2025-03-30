@@ -1,13 +1,13 @@
 import { useState } from 'react'
-import './App.css'
+import './styles/App.css'
 
-import Portfolio from './pages/HomePage'
+import HomePage from './pages/HomePage'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <Portfolio />
+    <HomePage />
   )
 }
 
