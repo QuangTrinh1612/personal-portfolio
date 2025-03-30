@@ -1,5 +1,8 @@
 import { useState } from 'react'
-import './styles/App.css'
+
+import './styles/global.css'
+import './styles/TechStack.css'
+import './styles/Experience.css'
 
 import HomePage from './pages/HomePage'
 

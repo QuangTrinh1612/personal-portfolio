@@ -2,6 +2,9 @@
 import React, { useState, useEffect } from 'react';
 import { Database, Server, Code, LucideCloud, Moon, Sun } from 'lucide-react';
 
+import TechStackComponent from '../components/TechStack';
+import ExperienceComponent from '../components/Experience';
+
 const HomePage = () => {
   const [darkMode, setDarkMode] = useState(false);
   const [loaded, setLoaded] = useState(false);
@@ -124,6 +127,10 @@ const HomePage = () => {
             ))}
           </div>
         </section>
+
+        <TechStackComponent />
+        <ExperienceComponent />
+
       </main>
 
       {/* Footer */}
