@@ -1,127 +1,221 @@
-/* src/styles/global.css */
 :root {
-    --primary: #0a192f;
-    --secondary: #112240;
-    --accent: #64ffda;
-    --text-primary: #e6f1ff;
-    --text-secondary: #8892b0;
-    --fintech-blue: #1e3a8a;
-    --fintech-accent: #3b82f6;
-    --font-main: 'Roboto', sans-serif;
-    --font-heading: 'Montserrat', sans-serif;
-}
-
-* {
+    --navy: #0a192f;
+    --light-navy: #112240;
+    --lightest-navy: #233554;
+    --slate: #8892b0;
+    --light-slate: #a8b2d1;
+    --lightest-slate: #ccd6f6;
+    --white: #e6f1ff;
+    --green: #64ffda;
+    --green-tint: rgba(100, 255, 218, 0.1);
+    
+    --font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
+    --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+    
+    --fz-xxs: 12px;
+    --fz-xs: 13px;
+    --fz-sm: 14px;
+    --fz-md: 16px;
+    --fz-lg: 18px;
+    --fz-xl: 20px;
+    --fz-xxl: 22px;
+    --fz-heading: 32px;
+    
+    --border-radius: 4px;
+    --nav-height: 100px;
+    --nav-scroll-height: 70px;
+    
+    --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  
+  * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: var(--font-main);
-    background-color: var(--primary);
-    color: var(--text-primary);
-    line-height: 1.7;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: var(--font-heading);
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
-
-a {
-    text-decoration: none;
-    color: var(--accent);
-    transition: all 0.3s ease;
-}
-
-a:hover {
-    color: var(--fintech-accent);
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-.section {
-    padding: 6rem 0;
-}
-
-.section-title {
-    font-size: 2.5rem;
-    position: relative;
-    margin-bottom: 3rem;
-    display: inline-block;
-}
-
-.section-title::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--navy);
+    color: var(--slate);
+    font-family: var(--font-sans);
+    font-size: var(--fz-xl);
+    line-height: 1.3;
+  }
+  
+  /* Loader */
+  .loader {
+    position: fixed;
+    top: 0;
+    bottom: 0;
     left: 0;
-    width: 70px;
-    height: 4px;
-    background: var(--accent);
-}
-
-.btn {
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--navy);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+  }
+  
+  .loader-content {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--green);
+  }
+  
+  .loader-content h1 {
+    color: var(--green);
+    font-family: var(--font-mono);
+  }
+  
+  /* Main Layout */
+  .app {
+    min-height: 100vh;
+  }
+  
+  .main-content {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1600px;
+    min-height: 100vh;
+    padding: 0 150px;
+  }
+  
+  section {
+    margin: 0 auto;
+    padding: 100px 0;
+    max-width: 1000px;
+  }
+  
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 10px 0;
+    font-weight: 600;
+    color: var(--lightest-slate);
+    line-height: 1.1;
+  }
+  
+  .section-heading {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 10px 0 40px;
+    width: 100%;
+    font-size: var(--fz-heading);
+    white-space: nowrap;
+  }
+  
+  .section-heading::before {
+    position: relative;
+    counter-increment: section;
+    content: '0' counter(section) '.';
+    margin-right: 10px;
+    color: var(--green);
+    font-family: var(--font-mono);
+    font-size: var(--fz-xl);
+    font-weight: 400;
+  }
+  
+  .section-heading::after {
+    content: '';
+    display: block;
+    position: relative;
+    width: 300px;
+    height: 1px;
+    margin-left: 20px;
+    background-color: var(--lightest-navy);
+  }
+  
+  .numbered-heading {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 10px 0 40px;
+    width: 100%;
+    font-size: var(--fz-heading);
+    white-space: nowrap;
+  }
+  
+  /* Links & Buttons */
+  a {
     display: inline-block;
-    padding: 12px 30px;
-    border: 2px solid var(--accent);
-    color: var(--accent);
-    background: transparent;
-    border-radius: 4px;
-    font-weight: 500;
-    font-size: 16px;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    color: inherit;
+    position: relative;
+    transition: var(--transition);
+  }
+  
+  a:hover,
+  a:focus {
+    color: var(--green);
+  }
+  
+  .link-highlight {
+    color: var(--green);
+  }
+  
+  .button {
+    color: var(--green);
+    background-color: transparent;
+    border: 1px solid var(--green);
+    border-radius: var(--border-radius);
+    font-size: var(--fz-xs);
+    font-family: var(--font-mono);
+    line-height: 1;
+    text-decoration: none;
     cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.btn:hover {
-    background: rgba(100, 255, 218, 0.1);
-}
-
-.btn-primary {
-    background: var(--fintech-blue);
-    border-color: var(--fintech-blue);
-    color: white;
-}
-
-.btn-primary:hover {
-    background: var(--fintech-accent);
-    border-color: var(--fintech-accent);
-}
-
-/* Animation classes */
-.fade-in {
-    animation: fadeIn 1s ease-in;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
+    transition: var(--transition);
+    padding: 1.25rem 1.75rem;
+  }
+  
+  .button:hover,
+  .button:focus {
+    background-color: var(--green-tint);
+    outline: none;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 1080px) {
+    .main-content {
+      padding: 0 100px;
     }
-
-    to {
-        opacity: 1;
+  }
+  
+  @media (max-width: 768px) {
+    .main-content {
+      padding: 0 50px;
     }
-}
-
-/* Responsive design */
-@media screen and (max-width: 768px) {
-    .section {
-        padding: 4rem 0;
+    
+    section {
+      padding: 80px 0;
     }
-
-    .section-title {
-        font-size: 2rem;
+    
+    .section-heading::after {
+      width: 200px;
     }
-}
+  }
+  
+  @media (max-width: 480px) {
+    .main-content {
+      padding: 0 25px;
+    }
+    
+    section {
+      padding: 60px 0;
+    }
+  }

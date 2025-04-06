@@ -1,0 +1,218 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 11;
+    padding: 0px 50px;
+    width: 100%;
+    height: var(--nav-height);
+    background-color: rgba(10, 25, 47, 0.85);
+    backdrop-filter: blur(10px);
+    transition: var(--transition);
+  }
+  
+  .navbar.scrolled {
+    height: var(--nav-scroll-height);
+    transform: translateY(0px);
+    background-color: rgba(10, 25, 47, 0.85);
+    box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    color: var(--lightest-slate);
+    font-family: var(--font-mono);
+    counter-reset: item 0;
+    z-index: 12;
+  }
+  
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logo a {
+    color: var(--green);
+    width: 42px;
+    height: 42px;
+  }
+  
+  .logo-container {
+    color: var(--green);
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-links ol {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .nav-links ol li {
+    margin: 0 5px;
+    position: relative;
+    counter-increment: item 1;
+    font-size: var(--fz-xs);
+  }
+  
+  .nav-links ol li a {
+    padding: 10px;
+  }
+  
+  .nav-links ol li a span {
+    margin-right: 5px;
+    color: var(--green);
+    font-size: var(--fz-xxs);
+    text-align: right;
+  }
+  
+  .resume-button {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+  }
+  
+  .resume-button a {
+    padding: 0.75rem 1rem;
+  }
+  
+  .menu-button {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    margin-right: -15px;
+    padding: 15px;
+    border: 0;
+    background-color: transparent;
+    color: inherit;
+    text-transform: none;
+    transition-timing-function: linear;
+    transition-duration: 0.15s;
+    transition-property: opacity, filter;
+  }
+  
+  .hamburger {
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 24px;
+  }
+  
+  .hamburger span {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: var(--green);
+    border-radius: 4px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .hamburger span:nth-child(1) {
+    top: 0;
+  }
+  
+  .hamburger span:nth-child(2) {
+    top: 10px;
+  }
+  
+  .hamburger span:nth-child(3) {
+    top: 20px;
+  }
+  
+  .hamburger.active span:nth-child(1) {
+    top: 10px;
+    transform: rotate(135deg);
+  }
+  
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  
+  .hamburger.active span:nth-child(3) {
+    top: 10px;
+    transform: rotate(-135deg);
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 0 25px;
+    }
+    
+    .menu-button {
+      display: flex;
+    }
+    
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      right: 0;
+      padding: 50px 10px;
+      width: 75vw;
+      height: 100vh;
+      outline: 0;
+      background-color: var(--light-navy);
+      box-shadow: -10px 0px 30px -15px rgba(2, 12, 27, 0.7);
+      z-index: 9;
+      transform: translateX(100vw);
+      transition: var(--transition);
+    }
+    
+    .nav-links.nav-open {
+      transform: translateX(0vw);
+    }
+    
+    .nav-links ol {
+      flex-direction: column;
+      padding: 0;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .nav-links ol li {
+      margin: 0 auto 20px;
+      position: relative;
+      counter-increment: item 1;
+      font-size: var(--fz-lg);
+      width: 100%;
+    }
+    
+    .nav-links ol li a {
+      width: 100%;
+      padding: 15px 20px;
+    }
+    
+    .resume-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 10% auto 0;
+    }
+    
+    .resume-button a {
+      margin: 0 auto;
+      padding: 18px 50px;
+      font-size: var(--fz-sm);
+    }
+  }
