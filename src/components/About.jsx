@@ -44,20 +44,19 @@ const About = () => {
         <div className="about-text">
           <div>
             <p>
-              Hello! I'm Louis, a Data Architect passionate about designing efficient and scalable data solutions. My
-              journey in the data world began in 2015 when I discovered my fascination with transforming raw data
-              into valuable insights that drive business decisions.
+            Hello! I'm Louis, a Data Architect who blends deep technical expertise with strong business acumen.
+            Since 2015, I've been passionate about turning complex, messy data into meaningful insights that drive strategic decisions.
             </p>
 
             <p>
-              I specialize in building comprehensive data architectures that connect various data sources and enable
-              organizations to leverage their data assets effectively. My focus is on creating robust, future-proof
-              solutions that adapt to evolving business needs.
+            I specialize in designing scalable, future-proof data architectures that integrate diverse data sources across the enterprise.
+            My work spans system design, Azure cloud computing, Spark-based processing, and implementing data governance frameworks to ensure
+            data is secure, reliable, and actionable.
             </p>
 
             <p>
-              At Rackspace Technology, I work with cross-functional teams to design and implement modern data platforms
-              that help our clients make data-driven decisions, optimize operations, and uncover new opportunities.
+            At Rackspace Technology, I collaborate with cross-functional teams to build modern data platforms that empower clients to make
+            informed decisions, streamline operations, and unlock new growth opportunities.
             </p>
 
             <p>Here are a few technologies I've been working with recently:</p>
