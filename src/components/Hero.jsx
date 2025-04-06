@@ -35,15 +35,24 @@ const Hero = () => {
   return (
     <section className="hero" id="home">
       <div className="hero-container">
-        {items.map((item, i) => (
-          <div
-            key={i}
-            className={`hero-item ${isMounted ? 'fade-in' : 'fade-out'}`}
-            style={{ transitionDelay: `${isMounted ? i * 100 : 0}ms` }}
-          >
-            {item}
-          </div>
-        ))}
+        <div className="hero-graphics">
+          <div className="hero-box box1"></div>
+          <div className="hero-box box2"></div>
+          <div className="hero-box box3"></div>
+          <div className="hero-box box4"></div>
+          <div className="hero-box box5"></div>
+        </div>
+        <div className="hero-content">
+          {items.map((item, i) => (
+            <div
+              key={i}
+              className={`hero-item ${isMounted ? 'fade-in' : 'fade-out'}`}
+              style={{ transitionDelay: `${isMounted ? i * 100 : 0}ms` }}
+            >
+              {item}
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

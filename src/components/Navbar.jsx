@@ -63,7 +63,7 @@ const Navbar = () => {
             </li>
           </ol>
           <div className="resume-button">
-            <a href="/resume.pdf" className="button" target="_blank" rel="noopener noreferrer">
+            <a href="/assets/resume.pdf" className="button" target="_blank" rel="noopener noreferrer" download="Louis_Quang_Resume.pdf">
               Resume
             </a>
           </div>
