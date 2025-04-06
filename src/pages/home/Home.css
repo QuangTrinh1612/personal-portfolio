@@ -1,0 +1,13 @@
+/* src/pages/Home/Home.css */
+.home-page {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.home-page section:nth-child(odd) {
+    background-color: var(--primary);
+}
+
+.home-page section:nth-child(even) {
+    background-color: var(--secondary);
+}

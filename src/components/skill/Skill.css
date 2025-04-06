@@ -1,0 +1,89 @@
+/* src/components/Skills/Skills.css */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+  
+  .skill-category {
+    background-color: rgba(17, 34, 64, 0.5);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .skill-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  }
+  
+  .category-title {
+    font-size: 1.5rem;
+    color: var(--accent);
+    margin-bottom: 25px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .category-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--accent);
+  }
+  
+  .skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .skill-item {
+    width: 100%;
+  }
+  
+  .skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  
+  .skill-name {
+    font-weight: 500;
+    color: var(--text-primary);
+  }
+  
+  .skill-percentage {
+    color: var(--text-secondary);
+  }
+  
+  .skill-bar {
+    height: 8px;
+    background-color: rgba(136, 146, 176, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .skill-progress {
+    height: 100%;
+    background-color: var(--accent);
+    border-radius: 4px;
+    transition: width 1.5s ease-in-out;
+  }
+  
+  .skills-footer {
+    margin-top: 50px;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .skills-grid {
+      grid-template-columns: 1fr;
+    }
+  }

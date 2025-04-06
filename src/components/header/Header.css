@@ -1,0 +1,138 @@
+/* src/components/Header/Header.css */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 20px 0;
+    transition: all 0.3s ease;
+  }
+  
+  .header.scrolled {
+    background-color: rgba(10, 25, 47, 0.95);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo a {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--accent);
+    font-family: var(--font-heading);
+    letter-spacing: 1px;
+  }
+  
+  .nav-menu ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-menu ul li {
+    margin-left: 30px;
+  }
+  
+  .nav-menu ul li a {
+    color: var(--text-primary);
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    padding: 5px 0;
+  }
+  
+  .nav-menu ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent);
+    transition: width 0.3s ease;
+  }
+  
+  .nav-menu ul li a:hover::after {
+    width: 100%;
+  }
+  
+  .btn-resume {
+    border: 1px solid var(--accent);
+    padding: 8px 16px !important;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-resume:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+  }
+  
+  .mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 101;
+  }
+  
+  .mobile-menu-btn span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--accent);
+    transition: all 0.3s ease;
+  }
+  
+  .mobile-menu-btn.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  
+  .mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .mobile-menu-btn.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+  
+  @media screen and (max-width: 768px) {
+    .mobile-menu-btn {
+      display: flex;
+    }
+  
+    .nav-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 70%;
+      height: 100vh;
+      background-color: var(--secondary);
+      padding: 80px 40px;
+      transition: all 0.5s ease;
+      z-index: 100;
+      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    }
+  
+    .nav-menu.active {
+      right: 0;
+    }
+  
+    .nav-menu ul {
+      flex-direction: column;
+    }
+  
+    .nav-menu ul li {
+      margin: 15px 0;
+    }
+  
+    .nav-menu ul li a {
+      font-size: 18px;
+    }
+  }
