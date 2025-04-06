@@ -41,7 +41,7 @@ const Experience = () => {
       title: 'Data Architect',
       company: 'Rackspace Technology',
       url: 'https://www.rackspace.com',
-      range: 'January 2022 - Present',
+      range: 'April 2021 - Present',
       duties: [
         'Design and implement scalable, modern data architecture solutions for enterprise clients',
         'Lead cross-functional teams in the development of data warehousing and data lake solutions',
@@ -52,9 +52,9 @@ const Experience = () => {
     },
     {
       title: 'Senior Data Engineer',
-      company: 'Tech Innovators Inc.',
-      url: '#',
-      range: 'March 2019 - December 2021',
+      company: 'Shopee',
+      url: 'https://shopee.vn/',
+      range: 'June 2020 - April 2021',
       duties: [
         'Developed and maintained data pipelines for critical business operations',
         'Implemented real-time data processing solutions using streaming technologies',
@@ -65,9 +65,9 @@ const Experience = () => {
     },
     {
       title: 'Data Engineer',
-      company: 'Data Solutions Group',
-      url: '#',
-      range: 'June 2015 - February 2019',
+      company: 'Athena System',
+      url: 'https://unitedfintech.com/athena/',
+      range: 'September 2018 - June 2020',
       duties: [
         'Built and optimized ETL workflows for business intelligence reporting',
         'Created data quality monitoring frameworks to ensure data accuracy',
