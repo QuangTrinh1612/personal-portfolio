@@ -22,7 +22,7 @@
 }
 
 .contact .section-heading::before {
-  content: '04.';
+  content: '05.';
   bottom: 4px;
   margin-right: 10px;
   font-family: var(--font-mono);

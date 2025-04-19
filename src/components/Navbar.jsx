@@ -57,8 +57,13 @@ const Navbar = () => {
               </a>
             </li>
             <li>
+              <a href="#myProjects" onClick={() => setMenuOpen(false)}>
+                <span>04.</span> Personal Projects
+              </a>
+            </li>
+            <li>
               <a href="#contact" onClick={() => setMenuOpen(false)}>
-                <span>04.</span> Contact
+                <span>05.</span> Contact
               </a>
             </li>
           </ol>

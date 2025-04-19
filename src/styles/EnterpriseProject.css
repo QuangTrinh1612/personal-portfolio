@@ -150,6 +150,17 @@
   height: 300px;
   background-color: var(--green-tint);
   border-radius: var(--border-radius);
+  display: flex;          /* Use flexbox for alignment */
+  justify-content: center; /* Center horizontally */
+  align-items: center;    /* Center vertically */
+  overflow: hidden;       /* Prevent image overflow */
+}
+
+.img-placeholder img {
+  height: 300px;
+  width: auto;            /* Maintain aspect ratio */
+  object-fit: cover;      /* Cover the container while maintaining aspect ratio */
+  max-width: 100%;        /* Ensure image doesn't exceed container width */
 }
 
 .project-inner {
