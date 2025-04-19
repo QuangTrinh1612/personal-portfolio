@@ -19,50 +19,6 @@
   margin: 0;
 }
 
-/* Featured Projects */
-.featured-project {
-  position: relative;
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(12, 1fr);
-  align-items: center;
-  margin-bottom: 100px;
-}
-
-.featured-project:nth-of-type(odd) .project-content {
-  grid-column: 7 / -1;
-  text-align: right;
-}
-
-.featured-project:nth-of-type(odd) .project-tech-list {
-  justify-content: flex-end;
-}
-
-.featured-project:nth-of-type(odd) .project-links {
-  justify-content: flex-end;
-}
-
-.featured-project:nth-of-type(odd) .project-image {
-  grid-column: 1 / 8;
-}
-
-.featured-project:nth-of-type(even) .project-content {
-  grid-column: 1 / 7;
-  text-align: left;
-}
-
-.featured-project:nth-of-type(even) .project-tech-list {
-  justify-content: flex-start;
-}
-
-.featured-project:nth-of-type(even) .project-links {
-  justify-content: flex-start;
-}
-
-.featured-project:nth-of-type(even) .project-image {
-  grid-column: 6 / -1;
-}
-
 .project-content {
   position: relative;
   grid-column: 1 / 7;
