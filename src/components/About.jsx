@@ -26,14 +26,18 @@ const About = () => {
   }, []);
 
   const skills = [
-    'Data Architecture',
-    'Big Data',
-    'Cloud Solutions (AWS, Azure, GCP)',
-    'Data Warehousing',
-    'ETL/ELT',
-    'Data Modeling',
-    'SQL & NoSQL Databases',
-    'Data Governance'
+    'Programming (Python, Java)',
+    'Cloud Architecture (Azure, AWS)',
+    'Spark (Databricks)',
+    'Microsoft Fabrics',
+    'Airflow (Astronomer)',
+    'Kafka (Confluent)',
+    'IaC (Terraform)',
+    'Data Quality (Great Expectation, Soda)',
+    'dbt-core',
+    'Power BI',
+    'AI Agents (Autogen 0.4)',
+    'LLM Orchestration (Langchain, llama-index)'
   ];
 
   return (
@@ -50,17 +54,14 @@ const About = () => {
 
             <p>
             I specialize in designing scalable, future-proof data architectures that integrate diverse data sources across the enterprise.
-            My work spans system design, Azure cloud computing, Spark-based processing, and implementing data governance frameworks to ensure
+            My work spans system design, Azure & AWS cloud computing, ETL Framwork Design, and implementing Data Governance frameworks to ensure
             data is secure, reliable, and actionable.
-            </p>
-
-            <p>
-            At Rackspace Technology, I collaborate with cross-functional teams to build modern data platforms that empower clients to make
-            informed decisions, streamline operations, and unlock new growth opportunities.
             </p>
 
             <p>Here are a few technologies I've been working with recently:</p>
           </div>
+
+          <a className="link-highlight"> Technical Skills </a>
 
           <ul className="skills-list">
             {skills.map((skill, i) => (

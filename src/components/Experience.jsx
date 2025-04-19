@@ -43,11 +43,12 @@ const Experience = () => {
       url: 'https://www.rackspace.com',
       range: 'April 2021 - Present',
       duties: [
-        'Design and implement scalable, modern data architecture solutions for enterprise clients',
-        'Lead cross-functional teams in the development of data warehousing and data lake solutions',
-        'Establish data governance frameworks and best practices for large-scale implementations',
-        'Optimize ETL/ELT processes for improved performance and reliability',
-        'Collaborate with stakeholders to translate business requirements into technical specifications',
+        'Defined project scope, deliverables and plans with stakeholders while monitoring progress and mitigating risks',
+        'Provided strategic advice and solutions for scalable infrastructure, establishing robust data governance, security protocols and networking architecture',
+        'Architected scalable data platforms using Azure Cloud, Databricks, and Microsoft Fabric ecosystem',
+        'Developed high-performance ETL frameworks for diverse data sources (SAP, Oracle Fusion, RDB, IoT)',
+        'Led Microsoft Fabric and Power BI adoption initiatives for advanced analytics solutions',
+        'Mentored team members while improving project management processes and operational efficiency'
       ],
     },
     {
@@ -56,11 +57,9 @@ const Experience = () => {
       url: 'https://shopee.vn/',
       range: 'June 2020 - April 2021',
       duties: [
-        'Developed and maintained data pipelines for critical business operations',
-        'Implemented real-time data processing solutions using streaming technologies',
-        'Designed data models for analytical and operational data stores',
-        'Integrated various data sources into a unified data platform',
-        'Mentored junior engineers in data engineering best practices',
+        'Engineered PySpark scripts to efficiently query and analyze extensive datasets from diverse sources, including Excel, Presto, and third-party APIs',
+        'Designed and developed Power BI reports, dashboards, and ad-hoc queries to provide insights on 3PL reconciliation, financial performance, inventory management, cash flow forecasting, and voucher utilization',
+        'Partnered with Finance Controllers, HQ Finance Analysts, and local operations teams to align technical solutions with business objectives, reducing reporting time by 80%'
       ],
     },
     {
@@ -69,11 +68,36 @@ const Experience = () => {
       url: 'https://unitedfintech.com/athena/',
       range: 'September 2018 - June 2020',
       duties: [
-        'Built and optimized ETL workflows for business intelligence reporting',
-        'Created data quality monitoring frameworks to ensure data accuracy',
-        'Developed SQL queries and stored procedures for data transformation',
-        'Configured and maintained database systems for optimal performance',
-        'Collaborated with data analysts to support analytical requirements',
+        'Managed operations for five hedge funds based in Hong Kong and Singapore, with Assets Under Management (AUM) ranging from USD 150 million to USD 220 million.',
+        'Designed, developed, and supervised automated trading reports, custodian reconciliation processes, performance reports, asset valuation, and trade compliance frameworks.',
+        'Conducted ad-hoc performance analysis and risk assessments to meet diverse client requirements.',
+        'Collaborated with internal teams across Madrid and Boston, as well as external clients, to resolve data-related issues efficiently.'
+      ],
+    },
+    {
+      title: 'Financial Analyst',
+      company: 'Vietcombank',
+      url: 'https://www.vietcombank.com.vn',
+      range: 'January 2017 - April 2019',
+      duties: [
+        'In charge of 12 clients with total credit balance of 600 billions VND',
+        'Be responsible for evaluation of the financial performance of the clients, through analysis of Financial Statement, financial ratios, industry position, economic conditions and recommended the credit facilities',
+        'Adhere to the banks credit policy guidelines and are appropriately priced and structured.',
+        'Co-operate with other departments to manage and retain existing customers with the standard of customer service.',
+        'Explore new opportunities through different business networks to achieve business targets.',
+        'Querying data from internal sources by SQL, restructuring data, doing reports and building model forecasting the performance of the department to support manager on making strategy and conquering KPIs.'
+      ],
+    },
+    {
+      title: 'Audit Associate',
+      company: 'Deloitte',
+      url: 'https://www.deloitte.com',
+      range: 'December 2014 - December 2016',
+      duties: [
+        'Perform statutory audits and advise operation processes of specified sectors: Financial services (Banks and Insurance Companies), Trading, Manufacturing.',
+        'Review financial statements in accordance with VAS and IFRS, identify issues, define symptoms and recommend solutions.',
+        'Assist senior members of the team and liaise with client executives, and financial professionals as required.',
+        'Client Portfolio as Vietinbank, BIDV, PV Drilling, Pepperl & Fuchs, VNAirCaterers, MARSH'
       ],
     },
   ];
